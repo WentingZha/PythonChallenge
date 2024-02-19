@@ -1,0 +1,33 @@
+1.download
+pip3 install virtualenv
+
+2.create the environment
+virtualenv [name]
+
+To create the environment with a certain interpreter
+virtualenv -p [path]\python,exe [name]
+
+3.enter the environment
+turn to Scripts folder
+use command 'activate'
+
+4.exit
+deactivate
+
+5.activate the vitual environment instantly (optional)
+pip install virtualenvwrapper-win
+mkvirtualenv [name]
+workon [name]
+mkvirtualenv  -p [path]\python,exe [name]
+
+6.set variable
+WORKON_HOME
+
+7.remove
+rmvirtualenv [name]
+
+8.List all
+lsvirtualenv [name]
+
+9.Enter the environment folder instantly
+cdvirtualenv(command in wrapper)

@@ -1,0 +1,34 @@
+1.create a project
+django-admin startproject [project name]
+
+2.run a project
+python manage.py runserver
+(remember to install django under the folder, or add the right python path)
+
+change the ip and port
+python manage.py runserver 9000
+
+allow others to reach your server
+python manage.py runserver 0.0.0.0:8000
+
+3.start page
+127.0.0.1:8000
+
+4.create module (app)
+python manage.py startapp [app name]
+
+5.Change models to database field
+Generate the migration files:
+ python manage.py makemigrations
+
+Mapping the new files to DB:
+ python manage.py migrate
+
+6.Migrate old database to orm in the new project
+Import old db sql
+cd [new project folder]
+python manage.py inspectdb
+python manage.py inspectdb > models.py
+python manage.py migrate --fake-initial
+
+
