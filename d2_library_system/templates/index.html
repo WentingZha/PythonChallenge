@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<table>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Writer</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for book in books %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td><a href="{% url 'bookDetail' %}">{{ book.1 }}</a></td>
+					<td>{{ book.2 }}</td>
+					<td>{{ book.3 }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

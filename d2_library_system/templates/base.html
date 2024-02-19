@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zwt Library</title>
+    <link rel="stylesheet" href="{% static 'ZwtLibrary/base.css' %}">
+</head>
+<body>
+<nav>
+    <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'addBook' %}">New book</a></li>
+        <li><a href="{% url 'bestSeller' %}">Best Sellers</a></li> 
+        <li><a href="{% url 'editBook' %}">Shelf</a></li> 
+        <li><a href="{% url 'user' %}">User</a></li> 
+    </ul>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

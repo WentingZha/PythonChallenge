@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZWT</title>
+</head>
+<body>
+
+	<!--
+		no space between '=' and variables 
+		no space between '{' and %'
+	-->
+	{% with lz=family.1 %}
+		<p>{{ lz }}</p>
+	{% endwith %}
+
+	{% with family.2 as wm %}
+		<p>{{ wm }}</p>
+	{% endwith %}
+</body>
+</html>

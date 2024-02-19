@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decorator</title>
+</head>
+<body>
+	<form action="{% url 'add_animal' %}" method='post'>
+		<table>
+			<tbody>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td>
+						<textarea name="age" id="age" cols="30" rows="10"></textarea>
+					</td>	
+				</tr>
+				<tr>
+					<p></p>
+					<td><input type="submit" name="submit"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

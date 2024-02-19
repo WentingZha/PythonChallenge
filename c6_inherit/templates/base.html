@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DTL template inherit example by ZWT</title>
+<body>
+	<header>
+    <ul>
+        <li><a href="/">First Page</a></li>
+        <li><a href="{% url 'company' %}">Company</a></li>
+        <li><a href="{% url 'school' %}">School</a></li>
+       
+    </ul>
+    <p>User Name: {{ username }}</p>
+</header>
+<div class="content">
+	{% block content %}
+        This is the code block of the base template
+    {% endblock %}
+</div>
+<footer>
+    This is footer
+</footer>
+</body>
+</html>

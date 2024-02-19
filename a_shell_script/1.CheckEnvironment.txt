@@ -1,0 +1,19 @@
+#Enter the path of a document which is editable
+cd sdcard
+cd documents
+
+#Create a file
+touch Check.sh 
+
+#Grant permissions in Android
+chmod 777 Check.sh 
+
+#Edit file in Android
+vi check.sh
+
+#Press i to insert
+echo 'Check'
+
+#Press Esc and input :q! to quit
+#Press Esc and input :wq! to save and quit
+

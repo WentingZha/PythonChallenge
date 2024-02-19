@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+	<table>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Writer</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ bestSeller.bookId }}</td>
+				<td>{{ bestSeller.name }}</td>
+				<td>{{ bestSeller.author }}</td>
+				<td>{{ bestSeller.price }}</td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}

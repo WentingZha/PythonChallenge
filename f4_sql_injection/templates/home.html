@@ -1,0 +1,17 @@
+<!-- Change the website invisible, lead user to click the button -->
+<!-- If opacity is 0, the trick is disabled -->
+<!-- User django.middleware.clickjacking.XFrameOptionsMiddleware -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sql injection</title>
+</head>
+<body>
+    <ul>
+        {% for animal in animalList %}
+            <li>{{ animal }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS</title>
+</head>
+<body>
+	<ul>
+        {% for comment in comments %}
+        <!-- Use 'safe' to translate website tags  -->
+            <!-- <li>{{ comment.content|safe }}</li> -->
+
+        <!-- If you delete 'safe', post a comment like '<script>alert('Hi Guard');</script>',
+            it will not pop an alert.
+            It's regarded as characters -->
+            <li>{{ comment.content }}</li>
+        
+        {% endfor %}
+    </ul>
+
+	<form action="{% url 'createComment' %}" method='post'>
+        {% csrf_token %}
+        </p>
+		<textarea name="content" cols="30" rows="3"></textarea>
+        <p>
+            <input type="submit" name="submit">
+        </p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ORM ForeignKey Example</title>
+   
+</head>
+<body>
+<!-- 	<p>{{ article.title }}</p>
+	<p>{{ article.content }}</p>
+	<p>{{ article.category.name }}</p>
+	<p>{{ article.author.username }}</p> -->
+
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Title</th>
+				<th>Content</th>
+				<th>Name</th>
+				<th>Writer</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for article in articles %}
+				<tr>
+					<td>{{ article.id }}</td>
+					<td>{{ article.title }}</td>
+					<td>{{ article.content }}</td>
+					<td>{{ article.category.name }}</td>
+					<td>{{ article.author.username }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

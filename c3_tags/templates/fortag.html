@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZWT</title>
+</head>
+<body>
+
+	<ul>
+		{% for book in books %}
+			<li>{{	book }}</li>
+		{% endfor %}
+	</ul>
+
+
+<!--  
+	<ul>
+		{% for book in books reversed %}
+			<li>{{	book }}</li>
+		{% endfor %}
+	</ul>
+ -->
+
+	<ul>
+		{% for key in person.keys %}
+			<li>{{	key }}</li>
+		{% endfor %}
+	</ul>
+
+	<table>
+		<thead>
+			<tr>
+				<td>No.</td>
+				<td>Name</td>
+				<td>Gender</td>
+				<td>Hobby</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for person in family %}
+				{% if forloop.first %}
+					<tr style="background: blue">
+				{% elif forloop.last %}
+					<tr style="background: gray">
+				{% else %}
+					<tr>
+				{% endif %}
+					<td>{{forloop.counter}}</td>
+					<!-- <td>{{forloop.revcounter0}}</td> -->
+					<td>{{person.name}}</td>
+					<td>{{person.gender}}</td>
+					<td>{{person.hobby}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+
+
+	<ul>
+		{% for comment in comments %}
+			<li>{{	comment }}</li>
+		{% empty %}
+			<li>No comments</li>
+		{% endfor %}
+
+	</ul>
+</body>
+</html>

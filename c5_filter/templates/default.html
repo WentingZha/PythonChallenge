@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter example by ZWT</title>
+<body>
+	<!-- Pass a value -->
+	<!--  {{ value|default:"I am a default value" }} -->
+
+	<!-- Pass a value that is not defined, it will display the default value -->
+	<!-- {{ notDefined|default:"I am a default value" }}  -->
+
+	<!-- Pass a value that is not initialized -->
+	{{ value|default_if_none:"I am a default value" }} 
+</body>
+</html>

